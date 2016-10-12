@@ -1,0 +1,37 @@
+#title {
+  color: white;
+  background-color:  blue;
+  font-family: arial;
+  padding-left: 5%;
+}
+
+.cell {
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+
+}
+
+.black {
+  background-color: black;
+
+}
+
+.green {
+background-color: green;
+
+}
+
+#color tr td {
+  width: 18px;
+  height: 18px;
+  border: 1px solid black;
+}
