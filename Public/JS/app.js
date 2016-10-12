@@ -7,6 +7,7 @@
   var numberOfRowsInput = $('#number-of-rows');
 
   makeGrid (15, 15);
+  $('#color tr td').on('click', selectColor);
   $('.cell').on('click', changeColor);
   updateGridButton.on('click', updateGridSize);
   //clearGrid();
@@ -40,7 +41,9 @@
     $('.cell').on('click', changeColor);
   }
 
+  function selectColor(event){
 
+  }
 
   function changeColor(event){
   //just 'this' cell's background
