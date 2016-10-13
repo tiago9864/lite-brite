@@ -25,6 +25,10 @@
       alert('Your number of columns is not within the parameters!');
       clearGrid();
       makeGrid(15, 15);
+      $('.cell').on('click', changeColor);
+      numberOfColsInput.val(" ");
+      numberOfRowsInput.val(" ");
+      return;
     }
 
     //now grab the number of rows from the user input and convert to number
@@ -34,11 +38,17 @@
       alert('Your number of rows is not within the parameters!');
       clearGrid();
       makeGrid(15, 15);
+      $('.cell').on('click', changeColor);
+      numberOfColsInput.val(" ");
+      numberOfRowsInput.val(" ");
+      return;
     }
 
     //make then new grid based on the new rows and columns
     makeGrid(newRowNumber, newColNumber);
     $('.cell').on('click', changeColor);
+    numberOfColsInput.val(" ");
+    numberOfRowsInput.val(" ");
   }
 
   function selectColor(event){
