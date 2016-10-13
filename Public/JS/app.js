@@ -5,6 +5,8 @@
   var updateGridButton = $('#update-grid-button');
   var numberOfColsInput = $('#number-of-cols');
   var numberOfRowsInput = $('#number-of-rows');
+  var colorGrid;
+
 
   makeGrid (15, 15);
   $('#color tr td').on('click', selectColor);
@@ -52,12 +54,16 @@
   }
 
   function selectColor(event){
-
+    colorGrid = $(this).attr("class");
   }
 
   function changeColor(event){
   //just 'this' cell's background
-    $(this).toggleClass('red');
+  //  $(this).toggleClass('red');
+  $(this).removeClass();
+  $(this).addClass(function(){
+    return "cell " + colorGrid;
+  });
   }
 
   function makeGrid (numberOfRows, numberOfCols){
